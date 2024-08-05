@@ -5,7 +5,7 @@ Credits - Roadmap framework from the [Propeers Front End Roadmap](https://www.pr
 
 Notes generated using ChatGPT
 
-#Table of Contents
+# Table of Contents
 - [Front-End-Roadmap](#front-end-roadmap)
   * [HTML](#html)
     + [1. HTML Basics](#1-html-basics)
@@ -21,12 +21,12 @@ Notes generated using ChatGPT
     + [4. Transitions and Animations](#4-transitions-and-animations)
     + [5. Responsive Design](#5-responsive-design)
     + [Responsive Design in Detail](#responsive-design-in-detail)
-    + [1. **Understanding Responsive Design**](#1---understanding-responsive-design--)
-    + [2. **Fluid Grids**](#2---fluid-grids--)
-    + [3. **Flexible Images**](#3---flexible-images--)
-    + [4. **Media Queries**](#4---media-queries--)
-    + [5. **Responsive Frameworks**](#5---responsive-frameworks--)
-    + [6. **Viewport Meta Tag**](#6---viewport-meta-tag--)
+    + [1. **Understanding Responsive Design**](#1---understanding-responsive-design)
+    + [2. **Fluid Grids**](#2---fluid-grids)
+    + [3. **Flexible Images**](#3---flexible-images)
+    + [4. **Media Queries**](#4---media-queries)
+    + [5. **Responsive Frameworks**](#5---responsive-frameworks)
+    + [6. **Viewport Meta Tag**](#6---viewport-meta-tag)
     + [Summary](#summary)
   * [JavaScript](#javascript)
     + [1. Intro to JavaScript](#1-intro-to-javascript)
