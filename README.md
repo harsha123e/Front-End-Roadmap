@@ -3221,7 +3221,7 @@ Rotate an array to the right by `k` steps.
 
 **Solution:**
 
-```
+```jsx
 function rotateArray(arr, k) {
   k = k % arr.length; // Handle cases where k is greater than array length
   return arr.slice(-k).concat(arr.slice(0, -k));
@@ -3239,7 +3239,7 @@ Check if a given array can be made non-decreasing by modifying at most one eleme
 
 **Solution:**
 
-```
+```jsx
 function checkPossibility(nums) {
   let count = 0;
   for (let i = 1; i < nums.length; i++) {
@@ -3268,7 +3268,7 @@ Find the index in an array where the sum of elements on the left is equal to the
 
 **Solution:**
 
-```
+```jsx
 function findEquilibriumIndex(arr) {
   let totalSum = arr.reduce((a, b) => a + b, 0);
   let leftSum = 0;
@@ -3295,7 +3295,7 @@ Find the smallest positive integer missing from an unsorted array.
 
 **Solution:**
 
-```
+```jsx
 function firstMissingPositive(nums) {
   let n = nums.length;
   for (let i = 0; i < n; i++) {
@@ -3321,7 +3321,7 @@ Reverse the words in a given string.
 
 **Solution:**
 
-```
+```jsx
 function reverseWords(str) {
   return str.split(' ').reverse().join(' ');
 }
@@ -3338,7 +3338,7 @@ Encode a string by counting consecutive characters.
 
 **Solution:**
 
-```
+```jsx
 function encodeString(str) {
   let result = '';
   let count = 1;
@@ -3367,7 +3367,7 @@ Find the minimum number of parentheses required to balance a string of parenthes
 
 **Solution:**
 
-```
+```jsx
 function minAddToMakeValid(s) {
   let left = 0, right = 0;
 
@@ -3397,7 +3397,7 @@ Check if a string is "beautiful" where no two consecutive characters are the sam
 
 **Solution:**
 
-```
+```jsx
 function isBeautifulString(s) {
   for (let i = 1; i < s.length; i++) {
     if (s[i] === s[i - 1]) return false;
@@ -3418,7 +3418,7 @@ Find the next smallest palindrome greater than a given number.
 
 **Solution:**
 
-```
+```jsx
 function nextPalindrome(num) {
   let str = num.toString();
   let len = str.length;
@@ -3446,7 +3446,7 @@ Find if there are any subarrays with a sum of zero.
 
 **Solution:**
 
-```
+```jsx
 function hasZeroSumSubarray(arr) {
   let sumSet = new Set();
   let sum = 0;
@@ -3473,7 +3473,7 @@ Check if a matrix is symmetric (i.e., it is equal to its transpose).
 
 **Solution:**
 
-```
+```jsx
 function isSymmetric(matrix) {
   let n = matrix.length;
 
@@ -3499,7 +3499,7 @@ Rotate a square matrix by 90 degrees in place.
 
 **Solution:**
 
-```
+```jsx
 function rotateMatrix(matrix) {
   let n = matrix.length;
 
@@ -3528,7 +3528,7 @@ Set entire row and column to zero if an element in the matrix is zero.
 
 **Solution:**
 
-```
+```jsx
 function setMatrixZeroes(matrix) {
   let rows = matrix.length;
   let cols = matrix[0].length;
@@ -3572,7 +3572,7 @@ Print a matrix in spiral order.
 
 **Solution:**
 
-```
+```jsx
 function spiralOrder(matrix) {
   let result = [];
   let top = 0, bottom = matrix.length - 1;
@@ -3609,7 +3609,7 @@ Remove duplicates from an array to make it unique.
 
 **Solution:**
 
-```
+```jsx
 function makeUniqueArray(arr) {
   return [...new Set(arr)];
 }
@@ -3626,7 +3626,7 @@ Find the first non-repeating character in a string.
 
 **Solution:**
 
-```
+```jsx
 function firstNonRepeatingChar(str) {
   let charCount = new Map();
 
@@ -3654,7 +3654,7 @@ Find the length of the longest subarray with a sum of zero.
 
 **Solution:**
 
-```
+```jsx
 function longestZeroSumSubarray(arr) {
   let maxLength = 0;
   let sumMap = new Map();
@@ -3686,7 +3686,7 @@ Count the number of subarrays whose sum is divisible by `k`.
 
 **Solution:**
 
-```
+```jsx
 function countSubarraysDivisibleByK(arr, k) {
   let count = 0;
   let sum = 0;
@@ -3715,7 +3715,7 @@ Group anagrams together from a list of strings.
 
 **Solution:**
 
-```
+```jsx
 function groupAnagrams(strs) {
   let map = new Map();
 
@@ -3742,7 +3742,7 @@ Find if there is a pair of numbers in an array that sums up to a given target.
 
 **Solution:**
 
-```
+```jsx
 function hasPairWithSum(arr, target) {
   let numSet = new Set();
 
@@ -3767,7 +3767,7 @@ Move all negative numbers to the start of an array, preserving the order of posi
 
 **Solution:**
 
-```
+```jsx
 function moveNegativesToStart(arr) {
   let negative = arr.filter(num => num < 0);
   let positive = arr.filter(num => num >= 0);
@@ -3786,7 +3786,7 @@ Find the maximum amount of water a container can hold between two lines in an ar
 
 **Solution:**
 
-```
+```jsx
 function maxArea(height) {
   let left = 0, right = height.length - 1;
   let maxArea = 0;
@@ -3817,7 +3817,7 @@ Check if one string is a subsequence of another.
 
 **Solution:**
 
-```
+```jsx
 function isSubsequence(s, t) {
   let sIndex = 0, tIndex = 0;
 
@@ -3843,7 +3843,7 @@ Sort an array using insertion sort algorithm.
 
 **Solution:**
 
-```
+```jsx
 function insertionSort(arr) {
   for (let i = 1; i < arr.length; i++) {
     let key = arr[i];
@@ -3870,7 +3870,7 @@ Sort an array using selection sort algorithm.
 
 **Solution:**
 
-```
+```jsx
 function selectionSort(arr) {
   for (let i = 0; i < arr.length - 1; i++) {
     let minIndex = i;
@@ -3898,7 +3898,7 @@ Sort an array using bubble sort algorithm.
 
 **Solution:**
 
-```
+```jsx
 function bubbleSort(arr) {
   let n = arr.length;
   for (let i = 0; i < n - 1; i++) {
@@ -3923,7 +3923,7 @@ Find the maximum sum of a contiguous subarray using Kadane’s Algorithm.
 
 **Solution:**
 
-```
+```jsx
 function kadaneAlgorithm(arr) {
   let maxSoFar = arr[0];
   let maxEndingHere = arr[0];
@@ -3947,7 +3947,7 @@ Sort an array with three distinct values (like 0, 1, 2) using Dutch National Fla
 
 **Solution:**
 
-```
+```jsx
 function dutchNationalFlag(arr) {
   let low = 0, mid = 0, high = arr.length - 1;
 
@@ -3978,7 +3978,7 @@ Find the majority element in an array using Moore’s Voting Algorithm.
 
 **Solution:**
 
-```
+```jsx
 function majorityElement(arr) {
   let candidate = arr[0];
   let count = 1;
@@ -4017,7 +4017,7 @@ Check if one string is a permutation of another.
 
 **Solution:**
 
-```
+```jsx
 function isPermutation(s1, s2) {
   if (s1.length !== s2.length) return false;
 
@@ -4039,7 +4039,7 @@ Find the intersection of two arrays.
 
 **Solution:**
 
-```
+```jsx
 function intersection(arr1, arr2) {
   let set1 = new Set(arr1);
   let set2 = new Set(arr2);
@@ -4058,7 +4058,7 @@ Find the element that appears more than `n/3` times in the array.
 
 **Solution:**
 
-```
+```jsx
 function findNBy3Repeated(arr) {
   let count1 = 0, count2 = 0;
   let candidate1 = null, candidate2 = null;
@@ -4106,7 +4106,7 @@ Sort an array using counting sort.
 
 **Solution:**
 
-```
+```jsx
 function countingSort(arr) {
   let max = Math.max(...arr);
   let min = Math.min(...arr);
@@ -4138,7 +4138,7 @@ Rotate a matrix 90 degrees to the right.
 
 **Solution:**
 
-```
+```jsx
 function rotateMatrix(matrix) {
   let n = matrix.length;
   for (let i = 0; i < n; i++) {
@@ -4168,7 +4168,7 @@ Find the Kth character of a decrypted string from an encoded string.
 
 **Solution:**
 
-```
+```jsx
 function findKthCharacter(encoded, k) {
   let decoded = '';
   let i = 0;
@@ -4202,7 +4202,7 @@ Move all zeroes in an array to the end, preserving the order of non-zero element
 
 **Solution:**
 
-```
+```jsx
 function moveZeroes(arr) {
   let nonZeroIndex = 0;
 
@@ -4228,7 +4228,7 @@ Find if there are two elements in an array that sum up to a third element.
 
 **Solution:**
 
-```
+```jsx
 function hasSumEqualsThird(arr) {
   let numSet = new Set();
 
@@ -4290,7 +4290,7 @@ Find the maximum sum of a circular subarray.
 
 **Solution:**
 
-```
+```jsx
 function maxSumCircularArray(arr) {
   let maxKadane = kadaneAlgorithm(arr);
 
@@ -4331,7 +4331,7 @@ Find the length of the longest consecutive elements sequence in an unsorted arra
 
 **Solution:**
 
-```
+```jsx
 function longestConsecutive(nums) {
   if (nums.length === 0) return 0;
 
@@ -4367,7 +4367,7 @@ Given an array `arr`, you need to find the maximum sum of a subarray after conca
 
 **Solution:**
 
-```
+```jsx
 function maxSubarraySumAfterKConcat(arr, k) {
   let maxKadane = kadaneAlgorithm(arr);
   let totalSum = arr.reduce((a, b) => a + b, 0);
@@ -4421,7 +4421,7 @@ Find the count of maximum product subarrays in an array.
 
 **Solution:**
 
-```
+```jsx
 function maxProductCount(arr) {
   if (arr.length === 0) return 0;
 
@@ -4454,7 +4454,7 @@ Multiply two non-negative integers represented as strings.
 
 **Solution:**
 
-```
+```jsx
 function multiplyStrings(num1, num2) {
   let m = num1.length;
   let n = num2.length;
@@ -4485,7 +4485,7 @@ Find all subsquares of size `K x K` in a matrix.
 
 **Solution:**
 
-```
+```jsx
 function findAllSubsquares(matrix, k) {
   let result = [];
   let rows = matrix.length;
@@ -4521,7 +4521,7 @@ Given an array with numbers from 1 to `n`, find the missing number and the repea
 
 **Solution:**
 
-```
+```jsx
 function findRepeatAndMissing(arr) {
   let n = arr.length;
   let totalSum = (n * (n + 1)) / 2;
@@ -4556,7 +4556,7 @@ Find all unique quadruplets in an array that sum up to a target value.
 
 **Solution:**
 
-```
+```jsx
 function fourSum(nums, target) {
   let result = [];
   nums.sort((a, b) => a - b);
@@ -4602,7 +4602,7 @@ Count all subarrays in an array that sum up to a given value.
 
 **Solution:**
 
-```
+```jsx
 function countSubarraysWithSum(arr, sum) {
   let count = 0;
   let currentSum = 0;
@@ -4634,7 +4634,7 @@ Find the maximum sum rectangle in a 2D matrix.
 
 **Solution:**
 
-```
+```jsx
 function maximumSumRectangle(matrix) {
   let rows = matrix.length;
   let cols = matrix[0].length;
@@ -4685,7 +4685,7 @@ Find the Nth element in a matrix traversed in spiral order.
 
 **Solution:**
 
-```
+```jsx
 function nthElementInSpiral(matrix, n) {
   let rows = matrix.length;
   let cols = matrix[0].length;
@@ -4735,7 +4735,7 @@ Find the integer part of the square root of a number `x`.
 
 **Solution:**
 
-```
+```jsx
 function sqrt(x) {
   if (x < 2) return x;
 
@@ -4762,7 +4762,7 @@ Search for a target value in a rotated sorted array.
 
 **Solution:**
 
-```
+```jsx
 function searchInRotatedArray(nums, target) {
   let left = 0, right = nums.length - 1;
 
@@ -4801,7 +4801,7 @@ Find the element that appears twice in an array.
 
 **Solution:**
 
-```
+```jsx
 function findDuplicate(nums) {
   let slow = nums[0];
   let fast = nums[0];
@@ -4836,7 +4836,7 @@ Find the median of a matrix where each row is sorted.
 
 **Solution:**
 
-```
+```jsx
 function findMatrixMedian(matrix) {
   let rows = matrix.length;
   let cols = matrix[0].length;
@@ -4894,7 +4894,7 @@ Place cows in stalls such that the minimum distance between any two cows is maxi
 
 **Solution:**
 
-```
+```jsx
 function aggressiveCows(stalls, k) {
   stalls.sort((a, b) => a - b);
   let left = 1, right = stalls[stalls.length - 1] - stalls[0];
@@ -4940,7 +4940,7 @@ Sort an array using merge sort algorithm.
 
 **Solution:**
 
-```
+```jsx
 function mergeSort(arr) {
   if (arr.length < 2) return arr;
 
@@ -4975,7 +4975,7 @@ Sort an array using quicksort algorithm.
 
 **Solution:**
 
-```
+```jsx
 function quickSort(arr) {
   if (arr.length < 2) return arr;
 
@@ -5002,7 +5002,7 @@ Find the Kth smallest element in an array.
 
 **Solution:**
 
-```
+```jsx
 function findKthSmallest(arr, k) {
   arr.sort((a, b) => a - b);
   return arr[k - 1];
@@ -5020,7 +5020,7 @@ Design a family tree structure using classes.
 
 **Solution:**
 
-```
+```jsx
 class Person {
   constructor(name) {
     this.name = name;
@@ -5051,7 +5051,7 @@ Generate binary strings of length `n` that do not contain consecutive 1s.
 
 **Solution:**
 
-```
+```jsx
 function generateBinaryStrings(n) {
   let result = [];
   function backtrack(path) {
@@ -5079,7 +5079,7 @@ Reverse a singly linked list.
 
 **Solution:**
 
-```
+```jsx
 class ListNode {
   constructor(value = 0, next = null) {
     this.value = value;
@@ -5120,7 +5120,7 @@ Find the middle node of a linked list.
 
 **Solution:**
 
-```
+```jsx
 function findMiddle(head) {
   let slow = head;
   let fast = head;
@@ -5147,7 +5147,7 @@ Add two numbers represented by linked lists.
 
 **Solution:**
 
-```
+```jsx
 function addTwoLists(l1, l2) {
   let dummy = new ListNode(0);
   let p = l1, q = l2, curr = dummy;
@@ -5187,7 +5187,7 @@ Sort a linked list using insertion sort.
 
 **Solution:**
 
-```
+```jsx
 function insertionSortList(head) {
   let dummy = new ListNode(-Infinity);
 
@@ -5228,7 +5228,7 @@ Delete the Kth node from the end of a linked list.
 
 **Solution:**
 
-```
+```jsx
 function deleteKthFromEnd(head, k) {
   let dummy = new ListNode(0, head);
   let fast = dummy;
@@ -5267,7 +5267,7 @@ Detect and remove a cycle in a linked list.
 
 **Solution:**
 
-```
+```jsx
 function detectAndRemoveCycle(head) {
   let slow = head;
   let fast = head;
@@ -5321,7 +5321,7 @@ Swap nodes in pairs in a linked list.
 
 **Solution:**
 
-```
+```jsx
 function swapPairs(head) {
   let dummy = new ListNode(0);
   dummy.next = head;
@@ -5359,7 +5359,7 @@ Append nodes from one linked list to another.
 
 **Solution:**
 
-```
+```jsx
 function appendNodes(head1, head2) {
   if (head1 === null) return head2;
 
@@ -5392,7 +5392,7 @@ Segregate odd and even nodes in a linked list.
 
 **Solution:**
 
-```
+```jsx
 function segregateOddEven(head) {
   let odd = new ListNode(0);
   let even = new ListNode(0);
@@ -5435,7 +5435,7 @@ console.log(result); // Output: [1, 3, 5, 2, 4]
 
 **Solution:**
 
-```
+```jsx
 class Stack {
   constructor() {
     this.items = [];
@@ -5480,7 +5480,7 @@ Implement a stack data structure using a linked list.
 
 **Solution:**
 
-```
+```jsx
 class ListNode {
   constructor(value = 0, next = null) {
     this.value = value;
@@ -5538,7 +5538,7 @@ Implement a queue data structure using an array.
 
 **Solution:**
 
-```
+```jsx
 class Queue {
   constructor() {
     this.items = [];
@@ -5584,7 +5584,7 @@ Implement a queue data structure using a linked list.
 
 **Solution:**
 
-```
+```jsx
 class ListNode {
   constructor(value = 0, next = null) {
     this.value = value;
@@ -5649,7 +5649,7 @@ Implement a queue using two stacks.
 
 **Solution:**
 
-```
+```jsx
 class QueueWithStacks {
   constructor() {
     this.stack1 = [];
@@ -5710,7 +5710,7 @@ Implement a stack using two queues.
 
 **Solution:**
 
-```
+```jsx
 class StackWithQueues {
   constructor() {
     this.queue1 = [];
@@ -5777,7 +5777,7 @@ Implement a stack that supports retrieving the minimum element in constant time.
 
 **Solution:**
 
-```
+```jsx
 class MinStack {
   constructor() {
     this.stack = [];
@@ -5824,7 +5824,7 @@ Find the next greater element for each element in an array.
 
 **Solution:**
 
-```
+```jsx
 function nextGreaterElements(nums) {
   let stack = [];
   let result = new Array(nums.length).fill(-1);
@@ -5855,7 +5855,7 @@ Find the span of stock’s price for each day.
 
 **Solution:**
 
-```
+```jsx
 function calculateSpan(prices) {
   let span = new Array(prices.length).fill(1);
   let stack = [];
@@ -5884,7 +5884,7 @@ Reverse a queue.
 
 **Solution:**
 
-```
+```jsx
 function reverseQueue(queue) {
   let stack = [];
 
@@ -5911,7 +5911,7 @@ Check if the parentheses in a string are valid.
 
 **Solution:**
 
-```
+```jsx
 function isValid(s) {
   let stack = [];
   let map = { '(': ')', '[': ']', '{': '}' };
@@ -5942,7 +5942,7 @@ Find the diameter of a binary tree (the longest path between any two nodes).
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -5981,7 +5981,7 @@ Find the Lowest Common Ancestor (LCA) of two nodes in a binary tree.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -6015,7 +6015,7 @@ Perform level order traversal (breadth-first traversal) of a binary tree.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -6061,7 +6061,7 @@ Perform ZigZag (spiral) order traversal of a binary tree.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -6113,7 +6113,7 @@ Find the left view of a binary tree.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -6157,7 +6157,7 @@ Find the top view of a binary tree.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -6202,7 +6202,7 @@ Construct a binary tree from given inorder and preorder traversals.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -6239,7 +6239,7 @@ Perform vertical order traversal of a binary tree.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -6287,7 +6287,7 @@ Perform inorder traversal of a binary tree using stacks.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -6328,7 +6328,7 @@ Find the Lowest Common Ancestor (LCA) of two nodes in a Binary Search Tree (BST)
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -6364,7 +6364,7 @@ Check if a binary tree is a binary search tree (BST).
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -6393,7 +6393,7 @@ Find the Kth smallest element in a Binary Search Tree (BST).
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -6434,7 +6434,7 @@ Find the predecessor and successor of a given node in a Binary Search Tree (BST)
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -6479,7 +6479,7 @@ Find if there is a pair in the BST that sums up to a given value.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -6517,7 +6517,7 @@ Check if one array is a subset of another array.
 
 **Solution:**
 
-```
+```jsx
 function isSubset(arr1, arr2) {
   let set = new Set(arr1);
 
@@ -6542,7 +6542,7 @@ Find the median of two sorted arrays.
 
 **Solution:**
 
-```
+```jsx
 function findMedianSortedArrays(nums1, nums2) {
   let merged = [...nums1, ...nums2].sort((a, b) => a - b);
   let len = merged.length;
@@ -6569,7 +6569,7 @@ Find the Lowest Common Ancestor (LCA) of three nodes in a binary tree.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -6606,7 +6606,7 @@ Remove nodes from a binary search tree that are outside a given range.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -6639,7 +6639,7 @@ Search for a value in a matrix where rows and columns are sorted.
 
 **Solution:**
 
-```
+```jsx
 function searchMatrix(matrix, target) {
   let row = 0;
   let col = matrix[0].length - 1;
@@ -6671,7 +6671,7 @@ Check if a linked list is a palindrome.
 
 **Solution:**
 
-```
+```jsx
 class ListNode {
   constructor(val = 0, next = null) {
     this.val = val;
@@ -6715,7 +6715,7 @@ Reverse nodes in a linked list in groups of size K.
 
 **Solution:**
 
-```
+```jsx
 class ListNode {
   constructor(val = 0, next = null) {
     this.val = val;
@@ -6761,7 +6761,7 @@ Solve the Tower of Hanoi problem with `n` disks.
 
 **Solution:**
 
-```
+```jsx
 function towerOfHanoi(n, from, to, aux) {
   if (n === 1) {
     console.log(`Move disk 1 from ${from} to ${to}`);
@@ -6786,7 +6786,7 @@ Implement an iterator for a Binary Search Tree (BST).
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -6837,7 +6837,7 @@ Flatten a binary tree into a linked list in place.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -6877,7 +6877,7 @@ Rearrange a linked list in a specific order (e.g., alternating small and large v
 
 **Solution:**
 
-```
+```jsx
 class ListNode {
   constructor(val = 0, next = null) {
     this.val = val;
@@ -6939,7 +6939,7 @@ Find the largest rectangle area in a histogram.
 
 **Solution:**
 
-```
+```jsx
 function largestRectangleArea(heights) {
   let stack = [];
   let maxArea = 0;
@@ -6977,7 +6977,7 @@ Sort a linked list using Quick Sort.
 
 **Solution:**
 
-```
+```jsx
 class ListNode {
   constructor(val = 0, next = null) {
     this.val = val;
@@ -7048,7 +7048,7 @@ Convert a sorted linked list to a balanced binary search tree (BST).
 
 **Solution:**
 
-```
+```jsx
 class ListNode {
   constructor(val = 0, next = null) {
     this.val = val;
@@ -7100,7 +7100,7 @@ Convert a binary tree to a doubly linked list in place.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -7148,7 +7148,7 @@ Find the bottom-right view of a binary tree.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -7189,7 +7189,7 @@ Merge two Binary Search Trees (BSTs) into one BST.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -7236,7 +7236,7 @@ Merge two binary trees by summing up overlapping nodes.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -7270,7 +7270,7 @@ Sort a stack using another stack.
 
 **Solution:**
 
-```
+```jsx
 function sortStack(stack) {
   let tempStack = [];
 
@@ -7304,7 +7304,7 @@ Print the boundary traversal of a binary tree.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -7369,7 +7369,7 @@ Find the longest substring with exactly K distinct characters.
 
 **Solution:**
 
-```
+```jsx
 function longestSubstringKDistinct(s, k) {
   let map = new Map();
   let start = 0, maxLen = 0;
@@ -7401,7 +7401,7 @@ Implement a basic HashMap.
 
 **Solution:**
 
-```
+```jsx
 class HashMap {
   constructor(size = 10) {
     this.size = size;
@@ -7454,7 +7454,7 @@ Find the closest distance pair of points in a 2D plane.
 
 **Solution:**
 
-```
+```jsx
 function closestDistancePair(points) {
   points.sort((a, b) => a[0] - b[0]);
 
@@ -7503,7 +7503,7 @@ Find the time taken to burn a binary tree from a given node.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -7570,7 +7570,7 @@ Allocate books to students in such a way that the maximum number of pages assign
 
 **Solution:**
 
-```
+```jsx
 function allocateBooks(pages, students) {
   let start = Math.max(...pages);
   let end = pages.reduce((a, b) => a + b, 0);
@@ -7612,7 +7612,7 @@ Clone a linked list where each node has an additional random pointer.
 
 **Solution:**
 
-```
+```jsx
 class ListNode {
   constructor(val = 0, next = null, random = null) {
     this.val = val;
@@ -7656,7 +7656,7 @@ Fix a binary search tree (BST) where two nodes are swapped by mistake.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -7708,7 +7708,7 @@ Find the Nth root of an integer `x`.
 
 **Solution:**
 
-```
+```jsx
 function nthRoot(x, n) {
   if (x < 0 && n % 2 === 0) return NaN; // Even roots of negative numbers are not real
 
@@ -7735,7 +7735,7 @@ Find the size of the largest Binary Search Tree (BST) in a binary tree.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
@@ -7774,7 +7774,7 @@ Implement an LRU (Least Recently Used) cache.
 
 **Solution:**
 
-```
+```jsx
 class LRUCache {
   constructor(capacity) {
     this.capacity = capacity;
@@ -7819,7 +7819,7 @@ Convert a binary tree to a doubly linked list (DLL) in-place.
 
 **Solution:**
 
-```
+```jsx
 class TreeNode {
   constructor(val = 0, left = null, right = null) {
     this.val = val;
